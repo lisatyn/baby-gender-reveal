@@ -1,0 +1,33 @@
+form {
+    font-family: Arial;
+    padding: 20px;
+    width: auto;
+    text-align: center;
+}
+
+#form-prompt {
+    font-size: 48px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+button {
+    text-align: center;
+    padding: 10px 30px 10px 30px;
+    margin-top: 30px;
+    border-radius: 30px;
+    color: black;
+    font-size: 25px;
+}
+
+button:hover,
+input:hover,
+label:hover {
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
