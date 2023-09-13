@@ -32,52 +32,54 @@
 </head>
 
 <body>
-    <div style="text-align: center; font-size: 30px; font-family: Arial, Helvetica, sans-serif;">
-        <p style="text-align: center; font-size: 80px; font-family: Arial, Helvetica, sans-serif;margin-bottom: 0px;">Baby Gender Reveal</p>
-        <p style="text-align: center; width: 600px; display: inline-block;">“There are no words that can describe the euphoria you feel when your baby recognizes you for the first time and smiles.” – Jared Padalecki</p>
-    </div>
+    <div class="game-container">
+        <div style="text-align: center; font-size: 30px; font-family: Arial, Helvetica, sans-serif;">
+            <p style="text-align: center; font-size: 80px; font-family: Arial, Helvetica, sans-serif;margin-bottom: 0px;">Baby Gender Reveal</p>
+            <p style="text-align: center; width: 600px; display: inline-block;">“There are no words that can describe the euphoria you feel when your baby recognizes you for the first time and smiles.” – Jared Padalecki</p>
+        </div>
 
-    <img src="images/main.png" style="width: 800px;">
+        <img src="images/main.png" style="width: 800px;">
 
-    <form id="form">
-        <p id=form-prompt style="font-size: 30px;"><b style="font-size: 80px; line-height: 70px;">
+        <form id="form">
+            <p id=form-prompt style="font-size: 30px;"><b style="font-size: 80px; line-height: 70px;">
             <span style="color: palevioletred;">Pink</span> or <span style="color: skyblue;">blue</span>,<br>we love you.</b><br>
-            <br>Let's find out what color it is!
-            <br><b>Blue</b> or <b>Pink</b>, the poo still stinks!
-            <br><span style="font-size: 23px; line-height: 50px;"> ( let's click and choose ) </span>
-        </p><br>
-        <input type="radio" id="girl" name="Gender" value="girl">
-        <label for="girl" style="color: palevioletred; font-weight: bold; font-size: 60px;">Barbie Pink</label><br>
-        <input type="radio" id="boy" name="Gender" value="boy">
-        <label for="boy" style="color: skyblue; font-weight: bold; font-size: 60px;">Ocean Blue</label><br>
+                <br>Let's find out what color it is!
+                <br><b>Blue</b> or <b>Pink</b>, the poo still stinks!
+                <br><span style="font-size: 23px; line-height: 50px;"> ( let's click and choose ) </span>
+            </p><br>
+            <input type="radio" id="girl" name="Gender" value="girl">
+            <label for="girl" style="color: palevioletred; font-weight: bold; font-size: 60px;">Barbie Pink</label><br>
+            <input type="radio" id="boy" name="Gender" value="boy">
+            <label for="boy" style="color: skyblue; font-weight: bold; font-size: 60px;">Ocean Blue</label><br>
 
-        <div id="revealMessage" style="display: none;">
-            <h1 id="message"></h1>
-        </div>
+            <div id="revealMessage" style="display: none;">
+                <h1 id="message"></h1>
+            </div>
 
-        <script>
-            document.getElementById('girl').addEventListener('change', function() {
-                if (this.checked) {
-                    document.getElementById('message').innerHTML = '<video src="images/girl.mp4" autoplay loop muted></video>';
-                    document.getElementById('revealMessage').style.display = 'block';
-                }
-            });
+            <script>
+                document.getElementById('girl').addEventListener('change', function() {
+                    if (this.checked) {
+                        document.getElementById('message').innerHTML = '<video src="images/girl.mp4" autoplay loop muted playsinline></video>';
+                        document.getElementById('revealMessage').style.display = 'block';
+                    }
+                });
 
-            document.getElementById('boy').addEventListener('change', function() {
-                if (this.checked) {
-                    document.getElementById('message').innerHTML = '<video src="images/boy.mp4" autoplay loop muted></video>';
-                    document.getElementById('revealMessage').style.display = 'block';
-                }
-            });
-        </script>
+                document.getElementById('boy').addEventListener('change', function() {
+                    if (this.checked) {
+                        document.getElementById('message').innerHTML = '<video src="images/boy.mp4" autoplay loop muted playsinline></video>';
+                        document.getElementById('revealMessage').style.display = 'block';
+                    }
+                });
+            </script>
 
-        <div>
-            <button type="submit">Let's find out what color it is !</button>
-        </div>
-    </form>
+            <div>
+                <button type="submit">Let's find out what color it is !</button>
+            </div>
+        </form>
 
-    <script src="javescript/game.js"></script>
-    <!-- Link to your JavaScript file -->
+        <script src="javescript/game.js"></script>
+        <!-- Link to your JavaScript file -->
+    </div>
 </body>
 
 </html>
