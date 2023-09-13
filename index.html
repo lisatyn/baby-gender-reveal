@@ -1,11 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Baby Gender Reveal</title>
     <link rel="stylesheet" href="stylesheet/style.css">
     <!-- Link to your CSS file -->
+
+    <style>
+        input[type="radio"] {
+            display: none;
+            /* Hide the radio buttons */
+        }
+        
+        label {
+            display: block;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 60px;
+            transition: transform 0.3s;
+            /* Add a transition for smooth animation */
+        }
+        
+        input[type="radio"]:checked+label {
+            transform: scale(1.2);
+            /* Scale up the label when the associated radio button is checked */
+        }
+    </style>
 </head>
 
 <body>
@@ -21,11 +44,32 @@
             <span style="color: palevioletred;">Pink</span> or <span style="color: skyblue;">blue</span>,<br>we love you.</b><br>
             <br>Let's find out what color it is!
             <br><b>Blue</b> or <b>Pink</b>, the poo still stinks!
+            <br><span style="font-size: 23px; line-height: 50px;"> ( let's click and choose ) </span>
         </p><br>
         <input type="radio" id="girl" name="Gender" value="girl">
-        <label for="adult" style="color: palevioletred; font-weight: bold; font-size: 60px;">Barbie Pink</label><br>
+        <label for="girl" style="color: palevioletred; font-weight: bold; font-size: 60px;">Barbie Pink</label><br>
         <input type="radio" id="boy" name="Gender" value="boy">
-        <label for="child" style="color: skyblue; font-weight: bold; font-size: 60px;">Ocean Blue</label><br>
+        <label for="boy" style="color: skyblue; font-weight: bold; font-size: 60px;">Ocean Blue</label><br>
+
+        <div id="revealMessage" style="display: none;">
+            <h1 id="message"></h1>
+        </div>
+
+        <script>
+            document.getElementById('girl').addEventListener('change', function() {
+                if (this.checked) {
+                    document.getElementById('message').innerHTML = '<video src="images/girl.mp4" autoplay loop muted></video>';
+                    document.getElementById('revealMessage').style.display = 'block';
+                }
+            });
+
+            document.getElementById('boy').addEventListener('change', function() {
+                if (this.checked) {
+                    document.getElementById('message').innerHTML = '<video src="images/boy.mp4" autoplay loop muted></video>';
+                    document.getElementById('revealMessage').style.display = 'block';
+                }
+            });
+        </script>
 
         <div>
             <button type="submit">Let's find out what color it is !</button>
