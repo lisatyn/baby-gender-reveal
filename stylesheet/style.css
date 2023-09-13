@@ -31,3 +31,14 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
+
+.game-container {
+    text-align: left;
+    /* Adjust as needed for other content */
+    display: inline-block;
+    /* This keeps it centered while allowing left alignment */
+}
+
+body {
+    text-align: center;
+}
