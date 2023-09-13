@@ -17,7 +17,7 @@ button {
     margin-top: 30px;
     border-radius: 50px;
     color: black;
-    font-size: 40px;
+    font-size: 35px;
     background-color: skyblue;
 }
 
@@ -42,4 +42,15 @@ img {
 
 body {
     text-align: center;
+}
+
+#message video {
+    max-width: 100%;
+    /* Make sure the video doesn't exceed its container's width */
+    max-height: 100%;
+    /* Make sure the video doesn't exceed its container's height */
+    margin: auto;
+    /* Center the video horizontally */
+    display: block;
+    /* Remove any default spacing */
 }
